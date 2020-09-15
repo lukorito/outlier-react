@@ -1,0 +1,9 @@
+.progress-full {
+  display: flex;
+  height: 20px;
+  background-color: #fff;
+
+  .progress-part {
+    transition: width 2s;
+  }
+}
