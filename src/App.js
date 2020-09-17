@@ -1,11 +1,12 @@
 import React from 'react'
-import './App.css'
 import ProgressBar from './components/ProgressBar'
+import QuestionParentComponent from './components/QuestionsParent'
 
 function App () {
   return (
     <div className='App'>
       <ProgressBar />
+      <QuestionParentComponent />
     </div>
   )
 }

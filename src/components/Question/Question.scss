@@ -1,0 +1,45 @@
+.question {
+    width: 30%;
+    &-counter {
+        font-size: 3em;
+    }
+    &-category {
+        font-size: 0.8em;
+        color: #555;
+    }
+    &-main {
+        margin-top: 10%;
+    }
+
+    &-answers {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .button-container {
+            width: 150px;
+            text-align: center;
+            margin-top: 10%;
+            button {
+                width: 100%;
+                height: 50px;
+            }
+
+        }
+    }
+    .answer-feedback {
+        text-align: center;
+        margin-top: 10%;
+
+        .question-feedback {
+            font-size: 2rem;
+        }
+
+        .question-next {
+            margin-top: 10%;
+            button {
+                padding: 5px;
+            }
+        }
+    }
+}
