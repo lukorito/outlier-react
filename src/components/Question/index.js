@@ -59,6 +59,7 @@ const Question = ({ question, currentQuestionCounter, totalQuestions, setCorrect
           <div className='button-container' key={index}>
             <button
               onClick={handleAnswerClick(answer)}
+              className={selectedAnswer === answer && 'black-bg'}
               disabled={
                 selectedAnswer && handleDisableButton(answer)
               }
