@@ -48,8 +48,8 @@ function App () {
           <div className='bottom-progress-container'>
             <ProgressBar
               parts={[
-                { 'percentage': `${score}%` },
                 { 'percentage': `${minScore}%` },
+                { 'percentage': `${score}%` },
                 { 'percentage': `${maxScore}%` }
               ]}
             />

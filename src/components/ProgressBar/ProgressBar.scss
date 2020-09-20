@@ -2,8 +2,14 @@
   display: flex;
   height: 20px;
   background-color: #fff;
+  width: 100%;
+  position: relative;
 
   .progress-part {
     transition: width 2s;
+    position: absolute;
+    left:0;
+    top: 0;
+    height: 100%;
   }
 }

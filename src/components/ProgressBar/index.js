@@ -26,7 +26,8 @@ const ProgressBar = ({ parts = [] }) => {
           key={index}
           style={{
             width: widths[index],
-            backgroundColor: colors()[index]
+            backgroundColor: colors()[index],
+            zIndex: parts.length - index
           }}
         />
       ))}
