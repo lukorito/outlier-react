@@ -1,3 +1,25 @@
 body {
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    
+}
+
+.App {
+    .top-progress {
+        position: relative;
+        top: 0
+    }
+    .bottom-progress {
+        display: flex;
+        justify-content: center;
+        &-wrapper {
+            margin-top: 20px;
+            width: 30%;
+            text-align: center;
+            .score {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
 }

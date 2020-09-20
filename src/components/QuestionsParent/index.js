@@ -1,19 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import Question from '../Question'
 import './QuestionParent.scss'
-const Questions = require('../../questions.json')
 
-const QuestionParentComponent = () => {
-  const [currentStep, setcurrentStep] = useState(0)
-  const [correctAnswersTotal, setCorrectAnswersTotal] = useState(0)
-  console.log(correctAnswersTotal, 'total')
-
-  const TOTAL_STEPS = Questions.length
-  const question = Questions[currentStep]
+const QuestionParentComponent = ({ questions, setCorrectAnswersTotal, setcurrentStep, currentStep, total }) => {
+  let question = questions[currentStep]
 
   const handleNextQuestion = () => {
     setcurrentStep((prev) => {
-      return prev > TOTAL_STEPS - 2 ? 0 : prev + 1
+      return prev > total - 2 ? 0 : prev + 1
     })
   }
 
@@ -21,13 +16,21 @@ const QuestionParentComponent = () => {
     <div className='questions-container'>
       <Question
         currentQuestionCounter={currentStep + 1}
-        totalQuestions={TOTAL_STEPS}
+        totalQuestions={total}
         question={question}
         setCorrectAnswersTotal={setCorrectAnswersTotal}
         handleNextQuestion={handleNextQuestion}
       />
     </div>
   )
+}
+
+QuestionParentComponent.propTypes = {
+  questions: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  setCorrectAnswersTotal: PropTypes.func.isRequired,
+  setcurrentStep: PropTypes.func.isRequired,
+  currentStep: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired
 }
 
 export default QuestionParentComponent

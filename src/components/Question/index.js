@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import './Question.scss'
 import { shuffle } from 'lodash'
 import useDeepCompareEffect from 'use-deep-compare-effect'
@@ -85,6 +86,14 @@ const Question = ({ question, currentQuestionCounter, totalQuestions, setCorrect
       )}
     </div>
   )
+}
+
+Question.propTypes = {
+  question: PropTypes.shape({}).isRequired,
+  currentQuestionCounter: PropTypes.number.isRequired,
+  totalQuestions: PropTypes.number.isRequired,
+  setCorrectAnswersTotal: PropTypes.func.isRequired,
+  handleNextQuestion: PropTypes.func.isRequired
 }
 
 export default Question

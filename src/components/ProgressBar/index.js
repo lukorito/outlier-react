@@ -4,7 +4,7 @@ import useDeepCompareEffect from 'use-deep-compare-effect'
 import './ProgressBar.scss'
 
 const ProgressBar = ({ parts = [] }) => {
-  const colors = ['#A9A9A9', '#696969', '#000000']
+  const colors = () => parts.length > 1 ? ['#000000', '#696969', '#A9A9A9'] : ['#A9A9A9']
 
   const [widths, setWidths] = useState(parts.map((part) => part.percentage))
 
@@ -26,7 +26,7 @@ const ProgressBar = ({ parts = [] }) => {
           key={index}
           style={{
             width: widths[index],
-            backgroundColor: colors[index]
+            backgroundColor: colors()[index]
           }}
         />
       ))}

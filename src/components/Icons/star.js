@@ -1,7 +1,6 @@
 import React from 'react'
 
 function StarIcon (props) {
-  console.log(props, 'props')
   return (
     <svg
       width={24}

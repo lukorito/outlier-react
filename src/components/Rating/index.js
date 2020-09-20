@@ -22,7 +22,6 @@ const Rating = ({ rating }) => {
     const newRatings = Array(ARRAY_LENGTH).fill(0).fill(1, 0, stars)
     setRatings(newRatings)
   }, [stars])
-  console.log(ratings)
 
   return (
     <div>
